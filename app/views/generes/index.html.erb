@@ -1,9 +1,9 @@
 <div class="messages">
   <div class="container">
-  	<% @messages.each do |message| %> 
+  	<% @generes.each do |genere| %> 
 			<div class="message"> 
-  			<p class="content"><%= message.content %></p> 
-  			<p class="time"><%= message.created_at %></p> 
+  			<p class="content"><%= genere.name %></p> 
+  			<p class="content"><%= genere.description %></p> 
 			</div> 
 		<% end %>
 		<%= link_to 'New Message', "messages/new" %>

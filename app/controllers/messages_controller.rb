@@ -4,11 +4,13 @@ class MessagesController < ApplicationController
     end
     
     def new
-       @message = Message.new 
+       @message = Message.new
+       @generes = Genere.all
     end    
     
     def create 
         @message = Message.new(message_params) 
+        
         if @message.save 
             redirect_to '/messages' 
         else 
@@ -18,6 +20,6 @@ class MessagesController < ApplicationController
     
     private 
     def message_params 
-        params.require(:message).permit(:content) 
+        params.require(:message).permit :content, :genere
     end
 end

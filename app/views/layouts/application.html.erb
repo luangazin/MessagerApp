@@ -8,8 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div class="header">
+    <div class="container">
+      <%= image_tag("logo-1m.svg", :alt => "Easy Message") %>
+      <h1>Messenger</h1>
+    </div>
+  </div>
+  
+  <%= yield %>
 
 </body>
 </html>
