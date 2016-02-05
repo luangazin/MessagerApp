@@ -14,3 +14,18 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-material-design
+
+var jquery = require("jquery");
+require("dropdown.js");
+
+jquery.material.init();
+
+jquery(document).ready(function() {
+    $(".select").dropdown({"optionClass": "withripple"});
+});
+$(".select").dropdown({ "autoinit" : ".select" });
+$(".select").dropdown({ "dropdownClass": "my-dropdown", "optionClass": "my-option awesome" });
+$(".select").dropdown({ "callback": function($dropdown) {
+  // $dropdown is the shiny new generated dropdown element!
+  $dropdown.fadeIn("slow");
+});
