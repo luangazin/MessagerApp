@@ -15,3 +15,9 @@
  *= require bootstrap-material-design
  *
  */
+
+.time {
+  color: #0084d7;
+  font-size: 12px;
+  margin-top: 12px;
+}
